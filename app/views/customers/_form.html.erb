@@ -1,0 +1,49 @@
+<%= form_with model: customer do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% customer.errors.full_messages_for(:name).each do |message| %>
+      <div class="error_messages"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :city %><br>
+    <%= form.text_field :city %>
+    <% customer.errors.full_messages_for(:city).each do |message| %>
+      <div class="error_messages"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :region %><br>
+    <%= form.select :regions, regions_dropdown, { include_blank: "-- Please select --"} %>
+    <% customer.errors.full_messages_for(:city).each do |message| %>
+      <div class="error_messages"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+    <% customer.errors.full_messages_for(:country).each do |message| %>
+      <div class="error_messages"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :postal_code %><br>
+    <%= form.text_field :postal_code %>
+    <% customer.errors.full_messages_for(:postal_code).each do |message| %>
+      <div class="error_messages"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  <button class="button">
+    <%= link_to "Back", customers_path %>
+  </button>
+
+<% end %>

@@ -1,0 +1,47 @@
+<h1>Inventory Management System</h1>
+<div>
+  <p>Welcome to the App.</p>
+</div>
+
+<div>
+  <p>Our app has <%= Customer.count %> customers and counting!</p>
+</div>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Region</th>
+        <th>Country</th>
+        <th>Postal Code</th>
+        <th colspan="30"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @customers.each do |customer| %>
+      <tr>
+        <td><%= link_to customer.name, customer_path(id: customer.id)%></td>
+        <td><%= link_to customer.city, customers_path(city: customer.city) %></td>
+        <td><%= customer.regions %></td>
+        <td><%= customer.country %></td>
+        <td><%= customer.postal_code %></td>
+        <td><%= link_to "Edit", edit_customer_path(customer) %></td>
+        <td><%= link_to "Destroy", customer, method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div>
+  <button class="button">
+    <%= link_to "New Customer", new_customer_path %>
+  </button>
+  <button class="button">
+    <%= link_to "Home", customers_path %>
+  </button>
+</div>

@@ -1,0 +1,123 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+  color: maroon;
+  text-align: center;
+  background-color: GhostWhite;
+}
+
+h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: black;
+  font-size: larger;
+  // padding: 5px;
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error_messages {
+  color: tomato;
+}
+
+div {
+  border-radius: 5px;
+  background-color: GhostWhite;
+  align-items: center;
+  text-align: center;
+}
+
+select {
+  width: fit-content;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  width: fit-content;
+  padding: 12px;
+  margin-top: 12px;
+  box-sizing: border-box;
+  border: 4px solid #025ea1;
+  border-radius: 10px;
+}
+
+th {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: medium;
+  color: black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: burlywood;
+  padding: 15px;
+  margin: 5px;
+}
+
+tr {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+label {
+  font-size: medium;
+  font-family: "Sofia", sans-serif;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+table {
+  width: 50%;
+  // align-items: center;
+  text-align: center;
+  color: brown;
+  border: 2px solid;
+  // background-color: aquamarine;
+  padding: 8px;
+  // border-collapse: collapse;
+  margin: auto;
+}
+
+.button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: Chartreuse;
+  color: #ffffff;
+}
+
+input[type="submit"]:hover {
+  background-color: Chartreuse;
+  color: #ffffff;
+}
+
+input[type="submit"] {
+  width: fit-content;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px;
+}

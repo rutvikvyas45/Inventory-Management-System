@@ -1,0 +1,20 @@
+<h1>Customer Details</h1>
+<div class='center'>
+  <h2>Name :</h2> <%= @customer.name %><br>
+  <h2>City :</h2> <%= @customer.city %><br>
+  <h2>Region :</h2> <%= @customer.regions %><br>
+  <h2>County :</h2> <%= @customer.country %><br>
+  <h2>Postal code :</h2> <%= @customer.postal_code %><br> 
+</div>
+
+<div>
+  <button class="button">
+    <%= link_to 'Edit', edit_customer_path(@customer) %>
+  </button>
+  <button class="button">
+    <%= link_to 'Delete', @customer, method: :delete, data: { confirm: "Are you sure?" } %>
+  </button>
+  <button class="button">
+    <%= link_to 'Home', customers_path %>
+  </button>
+</div>
